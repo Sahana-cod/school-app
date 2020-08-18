@@ -26,6 +26,7 @@ const hbs = expressHbs.create({
 });
 
 // Let express know to use handlebars
+app.listen(process.env.PORT, '0.0.0.0');
 app.engine(".hbs", hbs.engine);
 app.set("view engine", ".hbs");
 app.set("views", path.join(__dirname, "./views"));
